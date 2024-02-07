@@ -1,0 +1,86 @@
+ .page-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+ ul {
+     list-style-type: none;
+ }
+
+ .dashboard-container{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+ }
+
+ .dashboard-item{
+     text-align: center;
+     padding: 60px;
+ }
+
+.items-sold{
+    border: 2px solid rgba(0, 100, 0, 80%);
+    border-radius: 5px;
+    color: rgba(0, 100, 0, 80%);
+    background-color: rgba(0, 100, 0, 10%);
+}
+
+.purchased-stock{
+    border: 2px solid rgba(0, 0, 100, 80%);
+    border-radius: 5px;
+    color: rgba(0, 0, 100, 80%);
+    background-color: rgba(0, 0, 100, 10%);
+}
+
+.to-be-sold{
+    border: 2px solid rgba(100, 0, 0, 80%);
+    border-radius: 5px;
+    color: rgba(100, 0, 0, 80%);
+    background-color: rgba(100, 0, 0, 10%);
+}
+
+.product-image{
+    max-width: 400px;
+    margin-right: 50px;
+}
+
+.product-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.best-seller-container{
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    border: 1px dashed black;
+    background-color: rgba(237, 231, 225, 70%);
+    padding: 50px;
+}
+
+/*options-list krijg ik niet helemaal links uitgelijnd met de rest van de tekst*/
+.options-list{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+
+.icon{
+    width: 12px;
+    margin: 0 0 0 16px;
+}
+
+.button-sort{
+    border: 1px solid;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+    background-color: rgba(0, 0, 0, 5%);
+
+}
+
+
+
