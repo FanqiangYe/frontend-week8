@@ -9,16 +9,31 @@ import createScreenSizes from "./helpers/CreateScreenSizes.js";
 
 
 function App() {
+
+
+    // Ik krijg de buttons niet werken on click?
     function sortBestSellers() {
-        console.log('Meest verkocht eerst');
+        inventory.sort((a, b) => {
+            return a.sold - b.sold;
+        });
+
+        console.log(inventory);
     }
 
     function sortCheapest() {
-        console.log('Goedkoopste eerst');
+        inventory.sort((a, b) => {
+            return a.price - b.price;
+        });
+
+        console.log(inventory);
     }
 
     function sortSport() {
-        console.log('Meest geschikt voor sport eerst');
+        inventory.sort((a, b) => {
+            return a.refreshRate - b.refreshRate;
+        });
+
+        console.log(inventory);
     }
 
     return (
