@@ -40,10 +40,16 @@ function App() {
           <h2>{calculateTvToSell(inventory)}</h2>
       </article>
   </div>
+          <ul>
+              {inventory.map((product) => {
+                  return <li key={`merkenlijst-${product.type}`}>{product.brand}</li>
+              })}
+          </ul>
       </section>
 
           <h2>Best verkochte tv</h2>
-      <section className="best-seller-container">
+      <section>
+          <article className="product">
           <span>
                         <img className="product-image" src={bestSellingTv.sourceImg} alt="Afbeelding van het product"/>
                     </span>
@@ -59,6 +65,7 @@ function App() {
                   <li> <img className="icon" src="../src/assets/minus.png" alt="icon" /> ambilight </li>
               </ul>
           </div>
+              </article>
       </section>
 
           <section>
@@ -72,10 +79,42 @@ function App() {
               <button className="button-sort" type="button" onClick={sortSport}>
                   Meest geschikt voor sport eerst
               </button>
+                  {inventory.map((product) => {
+                      return <article className="product all-tvs-product" key={product.type}>
+                          <span>
+                        <img className="product-image" src={product.sourceImg} alt="Afbeelding van het product"/>
+                    </span>
+                          <div className="product-info all-tvs-product-info">
+                      <h3>{createProductName(product)}</h3>
+                      <p className="product-price">{createProductPrice(product)}</p>
+                      <p className="product-size">{createScreenSizes(product.availableSizes)}</p>
+                          <ul className="options-list">
+                              {product.options.map((option) =>{
+                                 if (option.applicable === true) {
+                                  return <li key={'{product.type} - ${option.name}'}> <img className="icon" src="../src/assets/check.png" alt="yes" />
+                                      {option.name} </li>;}
+                              else{
+                                     return <li key={'{product.type} - ${option.name}'}> <img className="icon" src="../src/assets/minus.png" alt="no" />
+                                         {option.name} </li>;
+                                 }
+                              })}
+
+
+
+                          </ul>
+                          </div>
+                      </article>
+                  })}
+
+
+
           </section>
+
 
       </main>
   )
+
+
 }
 
 
